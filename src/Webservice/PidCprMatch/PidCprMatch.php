@@ -1,9 +1,10 @@
 <?php
 
-namespace Nodes\NemId\PidCprMatch;
+namespace Nodes\NemId\Webservice\PidCprMatch;
 
 use GuzzleHttp\Client;
-use Nodes\NemId\PidCprMatch\Responses\Response;
+use Nodes\NemId\Webservice\PidCprMatch\Responses\Response;
+use Nodes\NemId\Webservice\Settings;
 
 /**
  * Class PidCprMatch.
@@ -13,7 +14,7 @@ use Nodes\NemId\PidCprMatch\Responses\Response;
 class PidCprMatch
 {
     /**
-     * @var \Nodes\NemId\PidCprMatch\Settings
+     * @var Settings
      */
     protected $settings;
 
@@ -36,9 +37,9 @@ class PidCprMatch
      * @param $pid
      * @param $cpr
      *
-     * @throws \Exception
+     * @throws Exception
      *
-     * @return \Nodes\NemId\PidCprMatch\Responses\Response
+     * @return Response
      */
     public function pidCprRequest($pid, $cpr)
     {
