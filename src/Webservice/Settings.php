@@ -9,6 +9,7 @@ use Nodes\NemId\Core\Mode;
  *
  * @author  Casper Rasmussen <cr@nodes.dk>
  */
+#[\AllowDynamicProperties]
 class Settings
 {
     /**

@@ -7,6 +7,7 @@ namespace Nodes\NemId\Core;
  *
  * @author  Taken from the WAYF repo
  */
+#[\AllowDynamicProperties]
 class Der extends Oids
 {
     /**

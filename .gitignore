@@ -2,6 +2,7 @@
 /vendor/
 /testcertificates/
 !/testcertificates/.gitkeep
+.idea
 
 ### macOS template
 # General

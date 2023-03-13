@@ -4,6 +4,7 @@ namespace Nodes\NemId\Login;
 
 use Nodes\NemId\Core\Nemid52Compat;
 
+#[\AllowDynamicProperties]
 class Login
 {
     /**
@@ -81,7 +82,7 @@ class Login
         }
 
         // UTF8 encode it
-        $normalized = utf8_encode($normalized);
+        $normalized = mb_convert_encoding($normalized, 'UTF-8');
 
         // Base64 and SHA256 Encode it
         $params['PARAMS_DIGEST'] = base64_encode(hash('sha256', $normalized, true));
